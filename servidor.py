@@ -1,6 +1,7 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, Response
 import pandas as pd
 import csv
+import time
 import requests
 import threading
 import socket
@@ -8,7 +9,6 @@ import psycopg2
 import os
 from sqlalchemy import create_engine, MetaData, Table, Column, Integer, text
 from sqlalchemy.exc import IntegrityError
-
 
 app = Flask(__name__)
 
